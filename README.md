@@ -1,3 +1,16 @@
+# Fork of Cached Video Player
+
+In our case we've wanted to keep using Chewie, but wanted to add caching.
+We then override underlying dependency: `video_player` with forked `cached_video_player` renamed as `video_player`.
+
+```
+dependency_overrides:
+    video_player:
+    git:
+        url: https://github.com/tomekit/flutter_cached_video_player.git
+        ref: master
+```
+
 # Cached Video Player
 
 A flutter plugin that has been forked from the official [video_player](https://pub.dev/packages/video_player) package except that it supports caching in Android and iOS.
